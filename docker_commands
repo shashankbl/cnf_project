@@ -1,11 +1,95 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+docker build -t cnf_project .
+docker tag cnf_project:latest cnf_project:techtrends
+docker images
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run -d -p 7111:3111 --name cnf_project_techtrends cnf_project:techtrends
+docker ps
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker logs cnf_project_techtrends
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+(venv) C:\Users\shash\Documents\GitHub\cnf_project [main ≡ +3 ~2 -0 !]> docker logs cnf_project_techtrends
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:app:2024-07-14 17:45:57 Successfully retrieved the main page of TechTrends app
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:45:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:45:57] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:45:57] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app:2024-07-14 17:46:02 Valid post_id=1. Successfully retrieved the article: 2020 CNCF Annual Report
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:02] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:02] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:02] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:46:05 Valid post_id=3. Successfully retrieved the article: Kubernetes v1.20 Release Notes
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:05] "GET /3 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:05] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:46:05 Valid post_id=3. Successfully retrieved the article: Kubernetes v1.20 Release Notes
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:05] "GET /3 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:05] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:46:08 Valid post_id=6. Successfully retrieved the article: Kubernetes Certification
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:08] "GET /6 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:08] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:46:08 Valid post_id=6. Successfully retrieved the article: Kubernetes Certification
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:08] "GET /6 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:08] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:46:12 Invalid post_id=60. Hence, 404 - File Not Found
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:12] "GET /60 HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:12] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:46:12 Invalid post_id=60. Hence, 404 - File Not Found
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:12] "GET /60 HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:12] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:46:13 Successfully retrieved the main page of TechTrends app
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:13] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:46:13 Successfully retrieved the main page of TechTrends app
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:13] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:46:16 Successfully retrieved the 'About Us' page
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:16] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:16] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:46:16 Successfully retrieved the 'About Us' page
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:16] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:16] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:46:18 Successfully retrieved the main page of TechTrends app
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:18] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:46:18 Successfully retrieved the main page of TechTrends app
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:18] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:46:21 Metrics request successful
+INFO:app:2024-07-14 17:46:21 Metrics request successful
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:21] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:21] "GET /metrics HTTP/1.1" 200 -
+INFO:app:2024-07-14 17:46:27 Healthz request successful
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:27] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:27] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:31] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:31] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:31] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:46:32 Unable to create new post since 'title' is missing
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:32] "POST /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:32] "POST /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:32] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:32] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:46:34 Unable to create new post since 'title' is missing
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:34] "POST /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:46:35] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:47:03 Created new post with title: Testing TechTrends
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:47:03] "POST /create HTTP/1.1" 302 -
+INFO:app:2024-07-14 17:47:03 Successfully retrieved the main page of TechTrends app
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:47:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:47:03] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:47:25 Successfully retrieved the main page of TechTrends app
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:47:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:47:25] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2024-07-14 17:47:29 Valid post_id=7. Successfully retrieved the article: Testing TechTrends
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:47:29] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [14/Jul/2024 17:47:29] "GET /static/css/main.css HTTP/1.1" 304 -
